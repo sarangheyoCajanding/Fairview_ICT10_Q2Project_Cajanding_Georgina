@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Club Members</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #edf2f8;
+            color: #26384a;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #345678;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .navbar h2 {
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .header {
+            background-color: #527da5;
+            color: white;
+            text-align: center;
+            padding: 35px;
+            margin: 25px auto;
+            max-width: 800px;
+            border-radius: 12px;
+        }
+
+        .container {
+            background-color: white;
+            max-width: 600px;
+            margin: 25px auto;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #b8c8d9;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #527da5;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #345678;
+        }
+
+        .result {
+            background-color: #f3f7fb;
+            padding: 18px;
+            margin-top: 20px;
+            border-radius: 8px;
+            overflow-wrap: break-word;
+        }
+
+        .footer {
+            text-align: center;
+            color: #60758a;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h2>MY ICT PORTFOLIO</h2>
+
+        <a href="index.html">Home</a>
+        <a href="elements.html">Element Checker</a>
+        <a href="members.html">Club Members</a>
+        <a href="about.html">Meet the Creator</a>
+    </div>
+
+    <div class="header">
+        <h1>School Club Members</h1>
+        <p>Dance Club Member Manager</p>
+    </div>
+
+    <div class="container">
+        <h2>Add a New Member</h2>
+
+        <div class="form-group">
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" placeholder="First Name">
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" placeholder="Last Name">
+        </div>
+
+        <button py-click="add_member">Add Member</button>
+
+        <div class="result" id="results">
+            <p>New members will appear here.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>ICT 10 Q2 Student Showcase 2026</p>
+    </div>
+
+    <script type="py" src="./members.py"></script>
+
+</body>
+</html>

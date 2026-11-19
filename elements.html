@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element Checker</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #edf2f8;
+            color: #26384a;
+            margin: 0;
+        }
+
+        .navbar {
+            background-color: #345678;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .navbar h2 {
+            color: white;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        .header {
+            background-color: #527da5;
+            color: white;
+            text-align: center;
+            padding: 35px;
+            margin: 25px auto;
+            max-width: 800px;
+            border-radius: 12px;
+        }
+
+        .container {
+            background-color: white;
+            max-width: 650px;
+            margin: 25px auto;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        h2, h3 {
+            color: #345678;
+        }
+
+        input {
+            width: 55%;
+            padding: 12px;
+            border: 1px solid #b8c8d9;
+            border-radius: 6px;
+        }
+
+        button {
+            background-color: #527da5;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #345678;
+        }
+
+        .search-box {
+            background-color: #f3f7fb;
+            padding: 18px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .result {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .info-box {
+            background-color: #f3f7fb;
+            padding: 15px;
+            border-left: 4px solid #527da5;
+            border-radius: 5px;
+        }
+
+        .info-box p {
+            color: #60758a;
+            font-size: 13px;
+        }
+
+        .info-box span {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .footer {
+            text-align: center;
+            color: #60758a;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h2 style="color: white;">MY ICT PORTFOLIO</h2>
+
+        <a href="index.html">Home</a>
+        <a href="elements.html">Element Checker</a>
+        <a href="members.html">Club Members</a>
+        <a href="about.html">Meet the Creator</a>
+    </div>
+
+    <div class="header">
+        <h1 style="color: white;">Periodic Table Information Finder</h1>
+        <p>Find basic information about chemical elements.</p>
+    </div>
+
+    <div class="container">
+        <h3>Search for an Element</h3>
+        <p>Enter the chemical symbol of the element you want to find.</p>
+
+        <div class="search-box">
+            <input type="text" id="symbol" placeholder="Enter symbol (e.g. H)">
+            <button py-click="search_element">Search</button>
+        </div>
+
+        <div class="result">
+
+            <div class="info-box">
+                <p>CHEMICAL SYMBOL</p>
+                <span id="element_symbol">-</span>
+            </div>
+
+            <div class="info-box">
+                <p>ELEMENT NAME</p>
+                <span id="element_name">-</span>
+            </div>
+
+            <div class="info-box">
+                <p>ATOMIC NUMBER</p>
+                <span id="atomic_number">-</span>
+            </div>
+
+            <div class="info-box">
+                <p>ATOMIC MASS</p>
+                <span id="atomic_mass">-</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        ICT 10 | Second Quarter | 2026-2027
+    </div>
+
+    <script type="py" src="./elements.py"></script>
+
+</body>
+</html>
